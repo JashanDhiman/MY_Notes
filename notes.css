@@ -70,13 +70,47 @@ a{
 :-ms-input-placeholder {
   color: #fff;
 }
-.nav-bar a:not(:first-child){
+.menu a{
 	display: none;
 }
 .nav-bar a.icon{
 	float: right;
 	top: 0;
 	display: block;
+}
+.menu{
+	height: 100%;
+	width: 0%;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	right: 0;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.9);
+	overflow-x: hidden;
+	transition: 0.5s;
+}
+.menu-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: grid;
+}
+.menu a {
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.menu a:hover{
+  color: #f1f1f1;
+}
+.menu .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
 }
 .notes{
 	display: grid;
@@ -86,22 +120,17 @@ a{
 }
 .note{
 	height: 200px;
-	width: 200px;
 	background-color: #7a5cf0;
 	border-radius: 20px;
 	padding: 20px;
-	margin: 20px;
 	overflow: hidden;
-}
-.note:hover{
-    box-shadow: 0 0 20px grey;
+	cursor: pointer;
 }
 .note .header{
 	display: none;
 }
 .note .content{
 	height: 70%;
-	width: 90%;
 	overflow: hidden;
 	margin: 6px;
 }
@@ -113,24 +142,29 @@ a{
 	color: greenyellow;
 }
 .open-note{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	height: 80vh;
-	width: 80%;
+	min-height: 90vh;
 	background-color: #7a5cf0;
 	border-radius: 20px;
 	padding: 20px;
 	margin: 20px;
-	overflow-y: auto;
 }
-.open-note .header{
+.open-note .note{
+	width: fit-content;
+	height: fit-content;
+}
+.open-note .note .header{
 	display: none;
 }
-.open-note .content{
+.open-note .note .content{
 	padding: 10px;
 }
-.open-note .date{
+.open-note .note .date{
 	display: none;
+}
+@media(max-width:720px){
+	.notes{
+    grid-template-columns: repeat(2,minmax(auto,100%));	
+    grid-gap: 10px;
+	}
+
 }
