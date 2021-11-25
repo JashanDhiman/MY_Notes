@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>notes</title>
+	<link rel="stylesheet" type="text/css" href="notes.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+<body>
+<div class="top">
+<div class="nav-bar" id="nav-bar">
+	<a>My Notes</a>
+  <a href="javascript:void(0);">New Folder</a>
+  <a href="javascript:void(0);">Sort By<i class="bi bi-filter-right"></i></a>
+  <a href="javascript:void(0);">Settings</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="bi bi-list"></i></a>
+</div>
+<div class="search_box">
+	<div class="search_btn"><i class="bi bi-search"></i></div>
+	<input type="text" class="input_search" placeholder="Search..">
+</div>
+</div>
+
+
+<div class="notes">
+	<!-- custom div settings i want to add like color or background pic, text size, create date, heading, share,settings,delete,hide,back button, favourite or pin top	  -->
+	<!-- user note -->
+	<div class="note" onclick="myFunction(this)">
+		<div class="header"><i class="bi bi-share-fill"></i>
+		<!-- <class="facourite"> --><i class="bi bi-star-fill"></i>
+		<!-- <class="delete"> --><i class="bi bi-trash-fill"></i>
+		<!-- <class="remind"> --><i class="bi bi-alarm-fill"></i></div>
+		<h2>Topic</h2>
+		<div class="content p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		<div class="date">nov 17</div>
+	</div>
+	<div class="note" onclick="myFunction(this)">
+		<div class="header"><i class="bi bi-share-fill"></i>
+		<!-- <class="facourite"> --><i class="bi bi-star-fill"></i>
+		<!-- <class="delete"> --><i class="bi bi-trash-fill"></i>
+		<!-- <class="remind"> --><i class="bi bi-alarm-fill"></i></div>
+		<h2>Topic</h2>
+		<div class="content p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		<div class="date">nov 10</div>
+	</div>
+	<div class="note" onclick="myFunction(this)">
+		<div class="header"><i class="bi bi-share-fill"></i>
+		<!-- <class="facourite"> --><i class="bi bi-star-fill"></i>
+		<!-- <class="delete"> --><i class="bi bi-trash-fill"></i>
+		<!-- <class="remind"> --><i class="bi bi-alarm-fill"></i></div>
+		<h2>Topic</h2>
+		<div class="content p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		<div class="date">nov 8</div>
+	</div>
+	<div class="note" onclick="myFunction(this)">
+		<div class="header"><i class="bi bi-share-fill"></i>
+		<!-- <class="facourite"> --><i class="bi bi-star-fill"></i>
+		<!-- <class="delete"> --><i class="bi bi-trash-fill"></i>
+		<!-- <class="remind"> --><i class="bi bi-alarm-fill"></i></div>
+		<h2>Topic</h2>
+		<div class="content p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		<div class="date">nov 9</div>
+	</div>
+	<div class="note" onclick="myFunction(this)">
+		<div class="header"><i class="bi bi-share-fill"></i>
+		<!-- <class="facourite"> --><i class="bi bi-star-fill"></i>
+		<!-- <class="delete"> --><i class="bi bi-trash-fill"></i>
+		<!-- <class="remind"> --><i class="bi bi-alarm-fill"></i></div>
+		<h2>Topic</h2>
+		<div class="content p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+		<div class="date">nov 3</div>
+	</div>
+	<div class="create"><i class="bi bi-plus-circle-fill"></i></div>
+</div>
+<script type="text/javascript">
+	function myFunction(div){
+		div.className = "open-note";
+		div.parentNode.parentNode.parentNode.style.display = none;
+		console.log(div.parentNode);
+	}
+</script>
+
+</body>
+</html>
