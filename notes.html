@@ -8,135 +8,144 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 <body>
-<div class="top" id="top">
-	<div class="nav-bar" id="nav-bar">
-		<a>My Notes</a>
-	  <a href="javascript:void(0);" class="icon" onclick="openNav()"><i class="bi bi-list"></i></a>
-	  <div class="menu" id="menu">
-	  	<a href="javascript:void(0);" class="closebtn" onclick="closeNav()"><i class="bi bi-arrow-return-left"></i></a>
-	  	<div class="menu-content">
-			  <a href="javascript:void(0);">New Folder</a>
-			  <a href="javascript:void(0);">Sort By<i class="bi bi-filter-right"></i></a>
-			  <a href="javascript:void(0);">Settings</a>
+<div class="main-div">		
+	<div class="top" id="top">
+		<div class="nav-bar" id="nav-bar">
+			<a style="float: left;">My Notes</a>
+		  <a style="float: right;" href="javascript:void(0);" class="icon" onclick="openNav()"><i class="bi bi-list"></i></a>
+		  <div class="menu" id="menu">
+		  	<a href="javascript:void(0);" class="closebtn" onclick="closeNav()"><i class="bi bi-arrow-return-left"></i></a>
+		  	<div class="menu-content">
+				  <a href="javascript:void(0);">New Folder</a>
+				  <a href="javascript:void(0);">Sort By<i class="bi bi-filter-right"></i></a>
+				  <a href="javascript:void(0);">Settings</a>
+				</div>
 			</div>
 		</div>
+		<div class="search_box">
+			<div class="search_btn"><i class="bi bi-search"></i></div>
+			<input type="text" class="input_search" placeholder="Search..">
+		</div>
 	</div>
-	<div class="search_box">
-		<div class="search_btn"><i class="bi bi-search"></i></div>
-		<input type="text" class="input_search" placeholder="Search..">
+
+	<div class="notes" id="notes">
+		<!-- custom div settings i want to add like color or background pic, text size, create date, heading, share,settings,delete,hide,back button, favourite or pin top	  -->
+		<!-- user note -->
+		<div class="note" onclick="myFunction(this)">
+			<div class="header">
+			<a href="javascript:void(0);" class="closebtn" onclick="cross(this)"><i class="bi bi-arrow-return-left"></i></a>
+			<a href="javascript:void(0);"><i class="bi bi-share-fill"></i></a>
+			<a href="javascript:void(0);"><i class="bi bi-star-fill"></i></a>
+			<a href="javascript:void(0);"><i class="bi bi-trash-fill"></i></a>
+			<a href="javascript:void(0);"><i class="bi bi-alarm-fill"></i></a></div>
+			<h2>Topic</h2>
+			<textarea class="content p" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+			<div class="date">nov 17</div>
+		</div>
+		<div class="note" onclick="myFunction(this)">
+			<div class="header">
+			<a href="javascript:void(0);" class="closebtn" onclick="cross(this)"><i class="bi bi-arrow-return-left"></i></a>
+			<a href="javascript:void(0);"><i class="bi bi-share-fill"></i></a>
+			<a href="javascript:void(0);"><i class="bi bi-star-fill"></i></a>
+			<a href="javascript:void(0);"><i class="bi bi-trash-fill"></i></a>
+			<a href="javascript:void(0);"><i class="bi bi-alarm-fill"></i></a></div>
+			<h2>Topic</h2>
+			<textarea class="content p" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+			<div class="date">nov 10</div>
+		</div>
+		<div class="note" onclick="myFunction(this)">
+			<div class="header">
+			<a href="javascript:void(0);" class="closebtn" onclick="cross(this)"><i class="bi bi-arrow-return-left"></i></a>
+			<a href="javascript:void(0);"><i class="bi bi-share-fill"></i></a>
+			<a href="javascript:void(0);"><i class="bi bi-star-fill"></i></a>
+			<a href="javascript:void(0);"><i class="bi bi-trash-fill"></i></a>
+			<a href="javascript:void(0);"><i class="bi bi-alarm-fill"></i></a></div>
+			<h2>Topic</h2>
+			<textarea class="content p" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+			<div class="date">nov 8</div>
+		</div>
+		<div class="note" onclick="myFunction(this)">
+			<div class="header">
+			<a href="javascript:void(0);" class="closebtn" onclick="cross(this)"><i class="bi bi-arrow-return-left"></i></a>
+			<a href="javascript:void(0);"><i class="bi bi-share-fill"></i></a>
+			<a href="javascript:void(0);"><i class="bi bi-star-fill"></i></a>
+			<a href="javascript:void(0);"><i class="bi bi-trash-fill"></i></a>
+			<a href="javascript:void(0);"><i class="bi bi-alarm-fill"></i></a></div>
+			<h2>Topic</h2>
+			<textarea class="content p" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+			<div class="date">nov 9</div>
+		</div>
+		<div class="note" onclick="myFunction(this)">
+			<div class="header">
+			<a href="javascript:void(0);" class="closebtn" onclick="cross(this)"><i class="bi bi-arrow-return-left"></i></a>
+			<a href="javascript:void(0);"><i class="bi bi-share-fill"></i></a>
+			<a href="javascript:void(0);"><i class="bi bi-star-fill"></i></a>
+			<a href="javascript:void(0);"><i class="bi bi-trash-fill"></i></a>
+			<a href="javascript:void(0);"><i class="bi bi-alarm-fill"></i></a></div>
+			<h2>Topic</h2>
+			<textarea class="content p" readonly >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
+			<div class="date">nov 3</div>
+		</div>
+	</div>
+
+	<div id="create"><i class="bi bi-plus-circle-fill"></i></div>
+
+	<div class="open-note" id="open-note">
+		<form>
+			<input type="text" id="topic" placeholder="Topic">
+			<textarea id="note-text" placeholder="Write something here..."></textarea>
+		</form>
 	</div>
 </div>
 
-
-<div class="notes" id="notes">
-	<!-- custom div settings i want to add like color or background pic, text size, create date, heading, share,settings,delete,hide,back button, favourite or pin top	  -->
-	<!-- user note -->
-	<div class="note" onclick="myFunction(this)">
-		<div class="header">
-		<a href="javascript:void(0);" class="closebtn" onclick="cross(this)"><i class="bi bi-arrow-return-left"></i></a>
-		<a href="javascript:void(0);"><i class="bi bi-share-fill"></i></a>
-		<a href="javascript:void(0);"><i class="bi bi-star-fill"></i></a>
-		<a href="javascript:void(0);"><i class="bi bi-trash-fill"></i></a>
-		<a href="javascript:void(0);"><i class="bi bi-alarm-fill"></i></a></div>
-		<h2>Topic</h2>
-		<div class="content p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-		<div class="date">nov 17</div>
-	</div>
-	<div class="note" onclick="myFunction(this)">
-		<div class="header">
-		<a href="javascript:void(0);" class="closebtn" onclick="cross(this)"><i class="bi bi-arrow-return-left"></i></a>
-		<a href="javascript:void(0);"><i class="bi bi-share-fill"></i></a>
-		<a href="javascript:void(0);"><i class="bi bi-star-fill"></i></a>
-		<a href="javascript:void(0);"><i class="bi bi-trash-fill"></i></a>
-		<a href="javascript:void(0);"><i class="bi bi-alarm-fill"></i></a></div>
-		<h2>Topic</h2>
-		<div class="content p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-		<div class="date">nov 10</div>
-	</div>
-	<div class="note" onclick="myFunction(this)">
-		<div class="header">
-		<a href="javascript:void(0);" class="closebtn" onclick="cross(this)"><i class="bi bi-arrow-return-left"></i></a>
-		<a href="javascript:void(0);"><i class="bi bi-share-fill"></i></a>
-		<a href="javascript:void(0);"><i class="bi bi-star-fill"></i></a>
-		<a href="javascript:void(0);"><i class="bi bi-trash-fill"></i></a>
-		<a href="javascript:void(0);"><i class="bi bi-alarm-fill"></i></a></div>
-		<h2>Topic</h2>
-		<div class="content p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-		<div class="date">nov 8</div>
-	</div>
-	<div class="note" onclick="myFunction(this)">
-		<div class="header">
-		<a href="javascript:void(0);" class="closebtn" onclick="cross(this)"><i class="bi bi-arrow-return-left"></i></a>
-		<a href="javascript:void(0);"><i class="bi bi-share-fill"></i></a>
-		<a href="javascript:void(0);"><i class="bi bi-star-fill"></i></a>
-		<a href="javascript:void(0);"><i class="bi bi-trash-fill"></i></a>
-		<a href="javascript:void(0);"><i class="bi bi-alarm-fill"></i></a></div>
-		<h2>Topic</h2>
-		<div class="content p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-		<div class="date">nov 9</div>
-	</div>
-	<div class="note" onclick="myFunction(this)">
-		<div class="header">
-		<a href="javascript:void(0);" class="closebtn" onclick="cross(this)"><i class="bi bi-arrow-return-left"></i></a>
-		<a href="javascript:void(0);"><i class="bi bi-share-fill"></i></a>
-		<a href="javascript:void(0);"><i class="bi bi-star-fill"></i></a>
-		<a href="javascript:void(0);"><i class="bi bi-trash-fill"></i></a>
-		<a href="javascript:void(0);"><i class="bi bi-alarm-fill"></i></a></div>
-		<h2>Topic</h2>
-		<div class="content p">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-		<div class="date">nov 3</div>
-	</div>
-	<div class="create"><i class="bi bi-plus-circle-fill"></i></div>
-</div>
-<div class="open-note" id="open-note" style="display: none"></div>
 <script type="text/javascript">
 	function myFunction(div){
 		var a = document.getElementById("open-note");
 		var top = document.getElementById("top");
 		var notes = document.getElementById("notes");
+		var create = document.getElementById("create");
 		top.style.display = "none";
 		notes.style.display = "none";
+		create.style.display = "none";
 		div.onclick = "#";
-		a.appendChild(div);
+		// a.appendChild(div);
 		div.parentNode.style.display = "block";
-		a.childNodes[0].childNodes[1].style.display = "block";
+		// a.childNodes[0].childNodes[1].style.display = "block";
 	}
 	function cross(div){
 		location.reload();
 	}
 	function openNav() {
-  document.getElementById("menu").style.width = "100%";
+		document.getElementById("menu").style.width = "100%";
 	}
-
 	function closeNav() {
-	  document.getElementById("menu").style.width = "0%";
+	  	document.getElementById("menu").style.width = "0%";
 	}
 </script>
-
 </body>
 </html>
