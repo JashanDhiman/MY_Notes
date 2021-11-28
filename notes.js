@@ -38,7 +38,8 @@ function saveNote() {
 	var node0 = document.createElement("div");
 	var node1 = document.createElement("h2");
 	var node2 = document.createElement("textarea");
-	node1.innerHTML = topic;
+	if(topic && text){
+ 	node1.innerHTML = topic;
 	node2.innerHTML = text;
 	node2.className = "content";
 	node2.readOnly = true;
@@ -51,6 +52,10 @@ function saveNote() {
 		background-color:${random_colors[index++]}; transform:${random_degree[Math.floor(Math.random() * random_degree.length)]}`);
 
 	container3.style.display = "none";
+	}
+	else{
+		alert("something is missing in note");
+	}
 }
 function shareNote() {
 	
