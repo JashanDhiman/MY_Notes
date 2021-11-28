@@ -94,8 +94,8 @@ a{
 .closebtn {
   position: absolute;
   top: 5%;
-  left: 5%;
-  font-size: 2rem !important;
+  right: 5%;
+  font-size: 1.5rem !important;
 }
 #create{
 	position: fixed;
@@ -124,18 +124,35 @@ a{
 	cursor: pointer;
 }
 .header{
-	display: none;
+	/*display: none;*/
+	font-size: 1.2rem;
+	float: right;
 }
-.note .content{
-	height: 70%;
+.content{
+	height: 80%;
 	overflow: hidden;
 	width: 95%;
 	margin: 6px;
 	background-color: transparent;
 	resize: none;
+	border: none;
+	text-align: justify;
+	outline: none;
+	cursor: pointer;
+}
+.container3{
+	display: none;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.9);
+	overflow-x: hidden;
+	transition: 0.5s;
 }
 .open-note{
-	/*display: none;*/
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -146,14 +163,23 @@ a{
 	overflow: hidden;
 }
 .open-note form #note-text{
-	margin-top: 1rem;
+	margin: 1rem;
 	outline: none;
 	border: none;
-	width: 35rem;
+	width: 50rem;
 	min-height: 30rem;
 	resize: none;
-	/*background-color: transparent;*/
+	background-color: transparent;
+	color: whitesmoke;
 }
+.open-note #topic{
+	background-color: transparent;
+	color: white;
+	border: none;
+	outline: none;
+	font-size: 1.8rem;
+}
+
 .open-note .note .header{
 	margin-bottom: 20px;
 	text-align: right;
