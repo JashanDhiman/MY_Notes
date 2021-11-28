@@ -155,7 +155,7 @@ a{
 	padding: 20px;
 	overflow: hidden;
 }
-.open-note form #note-text{
+.open-note #note-text{
 	margin: 1rem;
 	outline: none;
 	border: none;

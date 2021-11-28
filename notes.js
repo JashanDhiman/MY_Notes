@@ -67,12 +67,13 @@ function saveNote() {
 		node0.appendChild(node4);
 		node4.setAttribute("style","float:right;");
 		node4.setAttribute("onclick","trashNote(this.parentNode)");
+		node2.setAttribute("onclick","editNote(this)");
 		node0.setAttribute("style", `margin:${random_margin[Math.floor(Math.random() * random_margin.length)]}; 
 			background-color:${random_colors[index++]}; transform:${random_degree[Math.floor(Math.random() * random_degree.length)]}`);
 
 		node0.appendChild(node1);
 		node0.appendChild(node2);
-		notes.appendChild(node0);
+		notes.insertBefore(node0, notes.children[0]);
 
 		document.getElementById('topic').value = "";
 		document.getElementById('note-text').value = "";
@@ -85,23 +86,18 @@ function saveNote() {
 function trashNote(div) {
 	div.remove();
 }
+function editNote(div) {
+	div.parentNode.remove();
+	container3.style.display = "block";
+	var topicAdd = div.previousSibling.innerHTML;
+	var textAdd = div.innerHTML;
+	container3.getElementsByTagName("input")[0].value = topicAdd;
+	container3.getElementsByTagName("textarea")[0].value = textAdd;
+}
 // function shareNote() {
 	
 // }
 
-// function myFunction(div){
-// 	var a = document.getElementById("open-note");
-// 	var top = document.getElementById("top");
-// 	var notes = document.getElementById("notes");
-// 	var create = document.getElementById("create");
-// 	top.style.display = "none";
-// 	notes.style.display = "none";
-// 	create.style.display = "none";
-// 	div.onclick = "#";
-// 	// a.appendChild(div);
-// 	div.parentNode.style.display = "block";
-// 	// a.childNodes[0].childNodes[1].style.display = "block";
-// }
 function openNav() {
 	document.getElementById("menu").style.width = "100%";
 }
