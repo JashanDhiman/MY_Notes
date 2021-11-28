@@ -25,93 +25,23 @@
 		</div>
 		<div class="search_box">
 			<div class="search_btn"><i class="bi bi-search"></i></div>
-			<input type="text" class="input_search" placeholder="Search..">
+			<input type="text" class="input_search" placeholder="Search topic.." onkeyup="search(this.value)">
 		</div>
 	</div>
 
 	<div class="notes" id="notes">
 		<!-- custom div settings i want to add like color or background pic, text size, create date, heading, share,settings,delete,hide,back button, favourite or pin top	  -->
-		<!-- user note -->
-		<!-- <div class="note" onclick="myFunction(this)">
-			<div class="header">
-				<a href="javascript:void(0);"><i class="bi bi-share-fill"></i></a>
-				<a href="javascript:void(0);"><i class="bi bi-trash-fill"></i></a>
-			</div>
-			<h2>Topic</h2>
-			<textarea class="content p" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
-			<div class="date">nov 17</div>
-		</div>
-		<div class="note" onclick="myFunction(this)">
-			<div class="header">
-				<a href="javascript:void(0);"><i class="bi bi-share-fill"></i></a>
-				<a href="javascript:void(0);"><i class="bi bi-trash-fill"></i></a>
-			</div>
-			<h2>Topic</h2>
-			<textarea class="content p" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
-			<div class="date">nov 10</div>
-		</div>
-		<div class="note" onclick="myFunction(this)">
-			<div class="header">
-				<a href="javascript:void(0);"><i class="bi bi-share-fill"></i></a>
-				<a href="javascript:void(0);"><i class="bi bi-trash-fill"></i></a>
-			</div>
-			<h2>Topic</h2>
-			<textarea class="content p" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
-			<div class="date">nov 8</div>
-		</div>
-		<div class="note" onclick="myFunction(this)">
-			<div class="header">
-				<a href="javascript:void(0);"><i class="bi bi-share-fill"></i></a>
-				<a href="javascript:void(0);"><i class="bi bi-trash-fill"></i></a>
-			</div>
-			<h2>Topic</h2>
-			<textarea class="content p" readonly>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
-			<div class="date">nov 9</div>
-		</div>
-		<div class="note" onclick="myFunction(this)">
-			<div class="header">
-				<a href="javascript:void(0);"><i class="bi bi-share-fill"></i></a>
-				<a href="javascript:void(0);"><i class="bi bi-trash-fill"></i></a>
-			</div>
-			<h2>Topic</h2>
-			<textarea class="content p" readonly >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</textarea>
-			<div class="date">nov 3</div>
-		</div> -->
 	</div>
 
 	<div id="create"><i class="bi bi-plus-circle-fill"></i></div>
 
+				<!-- <a href="javascript:void(0);" id="share"><i class="bi bi-share-fill"></i></a> -->
+				<!-- <a href="javascript:void(0);" id="trash"><i class="bi bi-trash-fill"></i></a> -->
 	<div class="container3">
 		<div class="open-note" id="open-note">
 			<div class="header">
-				<a href="javascript:void(0);" id="save"><i class="bi bi-save"></i></a>
-				<a href="javascript:void(0);" id="share"><i class="bi bi-share-fill"></i></a>
-				<a href="javascript:void(0);" id="trash"><i class="bi bi-trash-fill"></i></a>
+				<a href="javascript:void(0);" id="save"><i class="bi bi-check-circle"></i></a>
+				<a href="javascript:void(0);" id="remove"><i class="bi bi-x-circle"></i></a>
 			</div>
 			<form>
 				<input type="text" id="topic" placeholder="Topic">

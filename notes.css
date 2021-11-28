@@ -7,9 +7,6 @@
 body{
 	background-color: #643fef;
 }
-.h2{
-	font-size: 1.5rem;
-}
 .p{
 	font-size: 1rem;
 }
@@ -43,7 +40,7 @@ a{
 	transition: 0.5s;
 }
 .menu-content {
-	margin-top: 25%;
+	margin-top: 15%;
 }
 .menu a {
   font-size: 2.5rem;
@@ -105,26 +102,22 @@ a{
 	color: greenyellow;
 	cursor: pointer;
 }
-/*changing are pending from here*/
 .notes{
-	/*display: grid;
-  grid-template-columns: repeat(5,minmax(auto,25%));
-  padding: 20px;
-  grid-gap: 40px;*/
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
+/*changing are pending from here*/
 .note{
-	height: 200px;
-	background-color: #7a5cf0;
-	border-radius: 20px;
+	height:200px;
+	width:200px;
+	margin-top:10px;
+	border-radius: 5px;
 	padding: 20px;
 	overflow: hidden;
 	cursor: pointer;
 }
 .header{
-	/*display: none;*/
 	font-size: 1.2rem;
 	float: right;
 }
@@ -180,7 +173,7 @@ a{
 	font-size: 1.8rem;
 }
 
-.open-note .note .header{
+/*.open-note .note .header{
 	margin-bottom: 20px;
 	text-align: right;
 }
@@ -192,6 +185,12 @@ a{
 }
 .open-note .note .date{
 	display: none;
+}*/
+::-webkit-scrollbar {
+  width: 2px;
+}
+::-webkit-scrollbar-thumb {
+  background: black;
 }
 @media(max-width:720px){
 	.notes{
