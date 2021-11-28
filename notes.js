@@ -4,7 +4,6 @@ var create = document.getElementById("create");
 var save = document.getElementById("save");
 var remove = document.getElementById("remove");
 // var share = document.getElementById("share");
-// var trash = document.getElementById("trash");
 var index = 0;
 var random_margin = ["-5px", "1px", "5px", "10px", "7px"];
 var random_colors = ["#c2ff3d","#ff3de8","#3dc2ff","#04e022","#bc83e6","#ebb328"];
@@ -33,10 +32,7 @@ remove.addEventListener("click",function(){
 	removeNote()
 })
 // share.addEventListener("click",function(){
-// 	createNote()
-// })
-// trash.addEventListener("click",function(){
-// 	trashNote()
+// 	shareNote()
 // })
 
 function createNote() {
@@ -60,18 +56,23 @@ function saveNote() {
 	var node0 = document.createElement("div");
 	var node1 = document.createElement("h2");
 	var node2 = document.createElement("textarea");
+	var node4 = document.createElement("i");
 	if(topic && text){
 		node0.className = "note";
 		node2.className = "content";
+		node4.className = "bi bi-trash-fill";
 	 	node1.innerHTML = topic;
 		node2.innerHTML = text;
 		node2.readOnly = true;
+		node0.appendChild(node4);
+		node4.setAttribute("style","float:right;");
+		node4.setAttribute("onclick","trashNote(this.parentNode)");
+		node0.setAttribute("style", `margin:${random_margin[Math.floor(Math.random() * random_margin.length)]}; 
+			background-color:${random_colors[index++]}; transform:${random_degree[Math.floor(Math.random() * random_degree.length)]}`);
 
 		node0.appendChild(node1);
 		node0.appendChild(node2);
 		notes.appendChild(node0);
-		node0.setAttribute("style", `margin:${random_margin[Math.floor(Math.random() * random_margin.length)]}; 
-			background-color:${random_colors[index++]}; transform:${random_degree[Math.floor(Math.random() * random_degree.length)]}`);
 
 		document.getElementById('topic').value = "";
 		document.getElementById('note-text').value = "";
@@ -81,10 +82,10 @@ function saveNote() {
 		alert("something is missing in note");
 	}
 }
+function trashNote(div) {
+	div.remove();
+}
 // function shareNote() {
-	
-// }
-// function trashNote() {
 	
 // }
 
