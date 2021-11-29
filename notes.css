@@ -106,14 +106,14 @@ a{
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+  padding: 1rem;
 }
-/*changing are pending from here*/
 .note{
-	height:200px;
-	width:200px;
-	margin-top:10px;
+	height:12rem;
+	width:12rem;
+	margin-top:1rem;
 	border-radius: 5px;
-	padding: 10px;
+	padding: 0.5rem;
 	overflow: hidden;
 	cursor: pointer;
 }
@@ -151,8 +151,8 @@ a{
 	left: 50%;
 	transform: translate(-50%,-50%);
 	background-color: #7a5cf0;
-	border-radius: 20px;
-	padding: 20px;
+	border-radius: 10px;
+	padding: 1rem;
 	overflow: hidden;
 }
 .open-note #note-text{
@@ -172,20 +172,6 @@ a{
 	outline: none;
 	font-size: 1.8rem;
 }
-
-/*.open-note .note .header{
-	margin-bottom: 20px;
-	text-align: right;
-}
-.open-note .note .header a{
-	margin: 10px;
-}
-.open-note .note .content{
-	padding: 10px;
-}
-.open-note .note .date{
-	display: none;
-}*/
 ::-webkit-scrollbar {
   width: 2px;
 }
@@ -193,9 +179,18 @@ a{
   background: black;
 }
 @media(max-width:720px){
+	.open-note #note-text,#topic{
+		width: 17rem;
+	}
 	.notes{
-    grid-template-columns: repeat(2,minmax(auto,100%));	
-    grid-gap: 10px;
+		padding: 0.5rem;
+	}
+	.note{
+		width: 10rem;
+		height: 10rem;
+	}
+	h2{
+		font-size: 1.2rem;
 	}
 
 }
