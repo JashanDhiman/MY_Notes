@@ -1,1 +1,3 @@
-# MY_Notes.github.io
+---
+permalink: /notes.html
+---
