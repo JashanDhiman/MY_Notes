@@ -1,3 +1,3 @@
 ---
-permalink: /notes.html
+permalink: /index.html
 ---
